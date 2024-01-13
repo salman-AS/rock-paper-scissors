@@ -1,6 +1,22 @@
 /* * {
-    border: 1px solid red;
+    border: 1px solid red;   
 } */
+
+body {
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    color: antiquewhite;
+    text-shadow: 0 0 5px #c70000;
+    letter-spacing: 1px;
+
+}
+
+.title {
+    text-transform: uppercase;
+    word-spacing: 13px;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
 
 .container {
     display: flex;
@@ -8,7 +24,7 @@
     margin-left: 15%;
     margin-right: 15%;
     height: 700px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -22,13 +38,22 @@
     display: flex;
     width: 200px;
     height: 125px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.11);
     margin: 10px;
     padding: 10px;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
-    letter-spacing: 1px;
+    border-radius: 15%;
+    box-shadow: 2px 2px 3px rgba(255, 0, 0, 0.171), 3px 3px 4px rgba(0, 128, 0, 0.267);
+}
+
+.button:hover {
+    box-shadow: 7px 7px 8px rgba(255, 0, 0, 0.171), 8px 8px 9px rgba(0, 128, 0, 0.267);
+}
+
+.button:active {
+    box-shadow: 5px 5px 6px rgba(255, 0, 0, 0.171), 6px 6px 7px rgba(0, 128, 0, 0.267);
 }
 
 #rock,
@@ -38,79 +63,102 @@
     background-size: contain;
 }
 
-#rock{
-    background-image: url("./img/rock.png");
-    background-size: contain;
-    color: antiquewhite;
+#paper,
+#scissors {
+    color: black;
 }
 
-#rock:hover{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(82, 82, 82, 0.308),
-    rgba(82, 82, 82, 0.308)
-  ), url("./img/rock.png");
+#rock {
+    background-image: url("./img/rock.png");
+    background-size: contain;
+}
+
+#rock:hover {
+    background-image: linear-gradient(to bottom,
+            rgba(82, 82, 82, 0.308),
+            rgba(82, 82, 82, 0.308)), url("./img/rock.png");
     transform: translate(0, -5px);
 }
 
-#rock:active{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(58, 58, 58, 0.308),
-    rgba(58, 58, 58, 0.308)
-  ), url("./img/rock.png");
-  transform: translate(0, -3px);
+#rock:active {
+    background-image: linear-gradient(to bottom,
+            rgba(58, 58, 58, 0.308),
+            rgba(58, 58, 58, 0.308)), url("./img/rock.png");
+    transform: translate(0, -3px);
 }
 
-#paper{
+#paper {
     background-image: url("./img/paper.png");
 }
 
-#paper:hover{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(82, 82, 82, 0.308),
-    rgba(82, 82, 82, 0.308)
-  ), url("./img/paper.png");
+#paper:hover {
+    background-image: linear-gradient(to bottom,
+            rgba(82, 82, 82, 0.308),
+            rgba(82, 82, 82, 0.308)), url("./img/paper.png");
     transform: translate(0, -5px);
 }
 
-#paper:active{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(58, 58, 58, 0.308),
-    rgba(58, 58, 58, 0.308)
-  ), url("./img/paper.png");
-  transform: translate(0, -3px);
+#paper:active {
+    background-image: linear-gradient(to bottom,
+            rgba(58, 58, 58, 0.308),
+            rgba(58, 58, 58, 0.308)), url("./img/paper.png");
+    transform: translate(0, -3px);
 }
 
-#scissors{
+#scissors {
     background-image: url("./img/scissors.png");
     background-size: contain;
 }
 
-#scissors:hover{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(82, 82, 82, 0.308),
-    rgba(82, 82, 82, 0.308)
-  ), url("./img/scissors.png");
+#scissors:hover {
+    background-image: linear-gradient(to bottom,
+            rgba(82, 82, 82, 0.308),
+            rgba(82, 82, 82, 0.308)), url("./img/scissors.png");
     transform: translate(0, -5px);
 }
 
-#scissors:active{
-    background-image: linear-gradient(
-    to bottom,
-    rgba(58, 58, 58, 0.308),
-    rgba(58, 58, 58, 0.308)
-  ), url("./img/scissors.png");
-  transform: translate(0, -3px);
+#scissors:active {
+    background-image: linear-gradient(to bottom,
+            rgba(58, 58, 58, 0.308),
+            rgba(58, 58, 58, 0.308)), url("./img/scissors.png");
+    transform: translate(0, -3px);
 }
 
-.score{
+.score {
     display: flex;
     width: 300px;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    width: 98%;
+    background-image: linear-gradient(to bottom,
+            rgba(82, 82, 82, 0.308),
+            rgba(82, 82, 82, 0.308));
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 5px #1b0303;
+    font-size: 20px;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    transition: 0.3s;
+    color: blue;
+}
+
+a:hover {
+    color: purple;
+    text-decoration: underline;
+    letter-spacing: 1px;
 }
