@@ -3,7 +3,7 @@
 } */
 
 body {
-    background-image: url("./img/background.jpg");
+    background-image: url("img/background.jpg");
     background-size: cover;
     color: antiquewhite;
     text-shadow: 0 0 5px #c70000;
